@@ -13,7 +13,7 @@ export default function TabNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='StackHome'
+        initialRouteName='About'
         screenOptions={{
           headerShown:false,
           tabBarActiveTintColor:"red",
@@ -31,7 +31,7 @@ export default function TabNavigator() {
         <Tab.Screen name='About' component={About}
           options = 
           {{tabBarIcon: ({color,size}) => {
-            return   <Ionicons name="contacts" size={size} color={color}/>
+            return   <Ionicons name="home-sharp" size={size} color={color}/>
           }}}></Tab.Screen>
         <Tab.Screen name='Contact' component={Contact}
           options = 
