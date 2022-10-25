@@ -13,7 +13,7 @@ export default function TabNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='About'
+        initialRouteName='StackHome'
         screenOptions={{
           headerShown:false,
           tabBarActiveTintColor:"red",
