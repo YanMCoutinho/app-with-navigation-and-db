@@ -5,7 +5,6 @@ import StudentCard from "../../components/studentCard";
 import firebase from "../../firebaseConnection";
 
 export default function Home() {
-    const [name, setName] = useState(' ')
     const [students, setStudents] = useState([])
 
     useEffect(() => {
@@ -30,12 +29,6 @@ export default function Home() {
         getStudents()
     }, [])
 
-    const navigation = useNavigation();
-
-    function navigateDetails() {
-        navigation.navigate('details', {name: 'Doni', email:'doni@gmail.com'})
-    }
-
     return (
         <View>
             <Text>TELA HOME</Text>
@@ -46,7 +39,7 @@ export default function Home() {
                 keyExtractor = { item => item.key}
                 renderItem = { ({item}) => <StudentCard img={item.img} name={item.name} note1={item.note1} note2={item.note2} note3={item.note3} />}
             />
-            <Button title="PÁGINA DE Detalhes" onPress={navigateDetails}></Button>
+            
         </View>
     )
 }
